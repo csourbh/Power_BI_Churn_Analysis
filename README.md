@@ -1,161 +1,189 @@
-📊 Customer Churn Analysis Dashboard (Power BI)
-📘 Overview
+# 📊 Customer Churn Analysis Dashboard (Power BI)
 
-This Power BI project analyzes customer churn patterns to identify key factors influencing attrition and retention within a telecom dataset.
-The dashboard provides a comprehensive overview of customer behavior, churn trends, and actionable insights based on demographics, contracts, payment methods, and service preferences.
+## 📘 Overview
+This project analyzes **customer churn trends** using **Power BI**, uncovering patterns that influence customer retention and business performance.  
+The analysis focuses on key demographics, service usage, and contract patterns that contribute to churn, helping the business take **data-driven retention actions**.
 
-🎯 Objectives
+---
 
-Identify the overall churn rate and its major contributors.
+## 🎯 Objectives
+- Identify the overall **churn rate** and major churn drivers.  
+- Examine churn across **age, gender, contract, and geography**.  
+- Discover customer segments at **high risk of churn**.  
+- Provide **strategic recommendations** to reduce churn.
 
-Analyze churn distribution across age groups, tenure, and geography.
+---
 
-Explore correlations between contract types, payment methods, and churn likelihood.
+## 🧠 Key Insights
 
-Provide insights to reduce churn and improve customer satisfaction.
+### 🔹 Overall Summary
+| Metric | Value |
+|--------|-------|
+| **Total Customers** | 6,418 |
+| **New Joiners** | 411 |
+| **Total Churned Customers** | 1,732 |
+| **Churn Rate** | **27.0%** |
 
-🧠 Key Insights
-🔹 Overall Summary
-Metric	Value
-Total Customers	6,418
-New Joiners	411
-Total Churned Customers	1,732
-Churn Rate	27.0%
-🔹 Churn by Gender
+---
 
-Male: 64.15%
+### 🔹 Churn by Gender
+| Gender | Churn % |
+|--------|----------|
+| Male | **64.15%** |
+| Female | 35.85% |
 
-Female: 35.85%
-➡️ Males have a significantly higher churn rate.
+> ✅ **Insight:** Males have a higher churn tendency compared to females.
 
-🔹 Churn by Age Group
-Age Group	Total Customers	Churn Rate
-< 20	100+	23.1%
-20–35	~1800	31.6% (Highest)
-36–50	~1800	23.7%
-> 50	~2700	23.6%
+---
 
-➡️ Younger adults (20–35) show the highest churn tendency — possibly due to competitive offers or mobility.
+### 🔹 Churn by Age Group
+| Age Group | Total Customers | Churn Rate |
+|------------|----------------|-------------|
+| < 20 | ~100 | 23.1% |
+| 20–35 | ~1800 | **31.6% (Highest)** |
+| 36–50 | ~1800 | 23.7% |
+| > 50 | ~2700 | 23.6% |
 
-🔹 Churn by Payment Method
-Payment Method	Churn Rate
-Mailed Check	37.8%
-Bank Withdrawal	34.4%
-Credit Card	14.8% (Lowest)
+> 📈 **Young adults (20–35)** are the most volatile group, likely due to competitor offers or lifestyle factors.
 
-➡️ Customers paying via credit card are the most loyal, suggesting convenience reduces churn.
+---
 
-🔹 Churn by Contract Type
-Contract Type	Churn Rate
-Month-to-Month	46.5% (Highest)
-One Year	11.0%
-Two Year	2.7% (Lowest)
+### 🔹 Churn by Payment Method
+| Payment Method | Churn Rate |
+|----------------|------------|
+| Mailed Check | **37.8%** |
+| Bank Withdrawal | 34.4% |
+| Credit Card | **14.8% (Lowest)** |
 
-➡️ Long-term contracts clearly enhance retention.
+> 💳 Customers paying via **credit card** are the most loyal — seamless payment improves retention.
 
-🔹 Churn by Tenure Group
-Tenure Group	Total Customers	Churn Rate
-< 6 Months	1058	26.4%
-6–12 Months	1296	27.2%
-12–18 Months	997	27.5%
-18–24 Months	980	26.1%
-≥ 24 Months	2087	27.2%
+---
 
-➡️ No strong linear trend; however, early tenure churn (< 6 months) is significant.
+### 🔹 Churn by Contract Type
+| Contract Type | Churn Rate |
+|----------------|------------|
+| Month-to-Month | **46.5% (Highest)** |
+| One Year | 11.0% |
+| Two Year | **2.7% (Lowest)** |
 
-🔹 Churn by Internet Type
-Internet Type	Churn Rate
-Fiber Optic	41.1% (Highest)
-Cable	25.7%
-DSL	19.4%
-None	7.8% (Lowest)
+> 📅 Long-term contracts show strong **churn prevention** potential.
 
-➡️ High churn among Fiber Optic users suggests potential service dissatisfaction or competitive alternatives.
+---
 
-🔹 Churn by State
-Top States (Highest Churn %)	Rate
-Jammu & Kashmir	57.2%
-Assam	38.1%
-Jharkhand	34.5%
-Chhattisgarh	30.5%
-Delhi	29.9%
+### 🔹 Churn by Tenure Group
+| Tenure Group | Total Customers | Churn Rate |
+|---------------|----------------|-------------|
+| < 6 Months | 1,058 | 26.4% |
+| 6–12 Months | 1,296 | 27.2% |
+| 12–18 Months | 997 | 27.5% |
+| 18–24 Months | 980 | 26.1% |
+| ≥ 24 Months | 2,087 | 27.2% |
 
-➡️ Northern and Northeastern regions exhibit higher churn — possibly due to network issues or aggressive competitor presence.
+> 🕒 Customers tend to leave early; improving **onboarding experience** can help reduce early churn.
 
-🔹 Churn by Category
-Reason Category	Count
-Competitor (Offers/Devices/Data)	761
-Attitude Issues	301
-Dissatisfaction	300
-Price	196
-Other	174
+---
 
-➡️ Competition remains the primary churn driver (44%+ of total churn).
+### 🔹 Churn by Internet Type
+| Internet Type | Churn Rate |
+|----------------|------------|
+| Fiber Optic | **41.1% (Highest)** |
+| Cable | 25.7% |
+| DSL | 19.4% |
+| None | **7.8% (Lowest)** |
 
-🔹 Service Usage vs Churn Behavior
-Service	Subscription %	Observation
-Internet Service	93.7%	Core product
-Unlimited Data	80.1%	Common feature
-Streaming TV	43.2%	Moderate
-Premium Support	16.5%	Low adoption
-Online Security	15.3%	Low adoption
-Device Protection	29%	Low adoption
+> 🌐 **Fiber Optic users** experience the most churn — possibly due to **service quality or competitor pricing**.
 
-➡️ Customers without add-on services (e.g., security, premium support) churn more — opportunity for bundled plans or upselling.
+---
 
-📈 Predicted Churners (Model-Based Insight)
+### 🔹 Churn by State
+| State | Churn % |
+|--------|----------|
+| Jammu & Kashmir | **57.2%** |
+| Assam | 38.1% |
+| Jharkhand | 34.5% |
+| Chhattisgarh | 30.5% |
+| Delhi | 29.9% |
 
-Predicted churners: 378,246 (model-level data insight)
+> 📍 High churn observed in **Northern and Northeastern** states — requires service quality improvement.
 
-Gender split: ~Equal (Male 193, Female 185)
+---
 
-High churn risk: Month-to-month, mailed check, <12 months tenure, fiber users.
+### 🔹 Churn by Category
+| Churn Category | Count |
+|----------------|--------|
+| Competitor (Offers/Devices/Data) | **761** |
+| Attitude Issues | 301 |
+| Dissatisfaction | 300 |
+| Price | 196 |
+| Other | 174 |
 
-💡 Business Recommendations
+> ⚠️ **Competitor activity** accounts for **44%+** of total churn.
 
-Promote annual/two-year contracts with attractive incentives.
+---
 
-Encourage digital payments (credit card/auto-pay) to improve retention.
+### 🔹 Service Usage & Churn Behavior
+| Service | Subscribed % | Observation |
+|----------|---------------|--------------|
+| Internet Service | 93.7% | Core offering |
+| Unlimited Data | 80.1% | Common |
+| Streaming TV | 43.2% | Moderate |
+| Premium Support | **16.5%** | Low usage |
+| Online Security | 15.3% | Low usage |
+| Device Protection | 29% | Low usage |
 
-Launch targeted retention offers for 20–35 age group customers.
+> 🧩 Lack of add-on services (security/support) correlates with higher churn — **upselling opportunity**.
 
-Address fiber service quality issues in high-churn regions.
+---
 
-Upsell premium support and online security packages to reduce attrition.
+## 📈 Predicted Churn (Model-Based Insight)
+| Metric | Value |
+|---------|--------|
+| **Predicted Churners** | 378,246 |
+| **Male : Female Split** | 193 : 185 |
+| **High-Risk Groups** | Month-to-Month, Mailed Check, <12-Month Tenure, Fiber Users |
 
-Implement customer feedback loops to improve attitude and satisfaction scores.
+> 🤖 Predictive insights enable **proactive retention strategies**.
 
-🛠️ Tools & Technologies
+---
 
-Power BI Desktop – Data visualization & dashboarding
+## 💡 Business Recommendations
+1. 📆 **Promote long-term contracts** (1–2 years) with loyalty discounts.  
+2. 💳 **Encourage auto-payments / credit cards** to reduce missed bills.  
+3. 🎯 Launch **retention campaigns** for customers aged **20–35**.  
+4. 🌐 Improve **Fiber Optic service quality** and offer bundle upgrades.  
+5. 🔐 Promote **Premium Support** and **Online Security** add-ons.  
+6. 🗣️ Collect **customer feedback** on dissatisfaction & attitude issues.
 
-Excel / CSV Data Source – Raw customer and churn data
+---
 
-DAX & Power Query – Data modeling and transformation
+## 🛠️ Tools & Technologies
+- **Power BI Desktop** – Visualization and dashboarding  
+- **Excel / CSV Data Source** – Input data  
+- **DAX & Power Query** – Data modeling & transformation  
+- **Visualizations:** KPIs, bar charts, maps, filters, slicers  
 
-Visualization Techniques: Bar charts, KPIs, slicers, and filters
+---
 
-📂 Dashboard Features
+## 📂 Dashboard Features
+- 📊 KPI Cards: Total Customers, Churn, Joiners  
+- 🧭 Filters: Age, Gender, Internet Type, State  
+- 📉 Trend Analysis: Payment & Contract correlation  
+- 🧠 Root Cause: Churn Category drill-down  
+- 🤖 Predictive Churn Indicators  
 
-KPI Cards for churn, total customers, and joiners
+---
 
-Interactive filters by Age, Gender, State, Internet Type
+## 📸 Dashboard Snapshot
+*(Add your Power BI screenshots here — e.g., dashboard overview, churn insights, state-wise view)*
 
-Visual comparisons of churn by Payment, Contract, and Tenure
+---
 
-Churn reason drill-down for root-cause analysis
+## 👤 Author
+**Sourbh Choudhary**  
+💼 QA Automation Engineer | Power BI Enthusiast | Data Analyst  
+📧 [csourbh9@gmail.com]
+---
 
-Predictive churn indicators for proactive actions
-
-📸 Dashboard Snapshot
-
-(You can add Power BI screenshots here for better presentation)
-
-👤 Author
-
-Sourbh Choudhary
-QA Automation Engineer | Power BI Enthusiast | Data Analyst
-📧 csourbh9@gmail.com
-
-🔗 LinkedIn
- | GitHub
+### 🏁 Summary
+This Power BI project delivers **deep churn analytics** for telecom data — identifying who is leaving, why they’re leaving, and how to **retain them strategically**.  
+It demonstrates proficiency in **data modeling, storytelling, and business interpretation** — key skills for a **Data Analyst / BI Developer** role.
